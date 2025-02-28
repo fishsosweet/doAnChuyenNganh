@@ -17,4 +17,4 @@ Route::get('/admin', function () {
     return redirect()->route('admin');
 });
 Route::get('/admin',[DangNhap::class,'dangNhap'])->name('admin');
-
+Route::post('/admin',[DangNhap::class,'kiemTraDangNhap'])->name('kiemTraDangNhap');

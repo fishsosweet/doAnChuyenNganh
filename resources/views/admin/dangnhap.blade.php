@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{$title}}</title>
+    <!-- Bootstrap CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
 <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
     <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Đăng nhập hệ thống</h2>
-    <form action="{{ route('admin') }}" method="POST">
+    @include('admin.loi')
+    <form action="{{ route('kiemTraDangNhap') }}" method="POST">
         @csrf
         <div class="mb-4">
             <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use http\Env\Request;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class DangNhap extends Controller
@@ -26,8 +26,16 @@ class DangNhap extends Controller
             'password.required'=>'Vui lòng nhập mật khẩu!'
         ]);
         if(Auth::attempt([
-            ''
-        ]))
+            'email'=>request('email'),
+            'password'=>request('password')
+        ])){
+            return redirect()->back()->with('success','Thành công!');
+        }
+        else{
+            return redirect()->back()->withErrors([
+                'login'=>'Thông tin đăng nhập không chính xác'
+            ])->withInput();
+        }
     }
 
 
