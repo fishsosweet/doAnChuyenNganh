@@ -12,9 +12,9 @@
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
 <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
     <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Đăng nhập hệ thống</h2>
-    @include('admin.loi')
+    @include('admin.Home.loi')
     <form action="{{ route('kiemTraDangNhap') }}" method="POST">
-        @csrf
+
         <div class="mb-4">
             <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
             <input
@@ -45,7 +45,7 @@
                     name="remember"
                     class="h-4 w-4 text-blue-500 focus:ring-blue-400 border-gray-300 rounded"
                 >
-                <label for="remember" class="ml-2 text-sm text-gray-700">Ghi nhớ đăng nhập</label>
+                <label for="remember" class="ml-2 text-sm text-gray-700" name="remember">Ghi nhớ đăng nhập</label>
             </div>
             <a href="#" class="text-sm text-blue-500 hover:underline">Quên mật khẩu?</a>
         </div>
@@ -55,9 +55,11 @@
         >
             Đăng nhập
         </button>
+        @csrf
     </form>
     <div class="mt-6 text-center">
-        <p class="text-sm text-gray-600">Chưa có tài khoản? <a href="#" class="text-blue-500 hover:underline">Đăng ký ngay</a></p>
+        <p class="text-sm text-gray-600">Chưa có tài khoản? <a href="#" class="text-blue-500 hover:underline">Đăng ký
+                ngay</a></p>
     </div>
 </div>
 </body>

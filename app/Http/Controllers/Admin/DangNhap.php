@@ -29,7 +29,7 @@ class DangNhap extends Controller
             'email'=>request('email'),
             'password'=>request('password')
         ])){
-            return redirect()->back()->with('success','Thành công!');
+            return redirect()->route('trangChuAdmin');
         }
         else{
             return redirect()->back()->withErrors([
