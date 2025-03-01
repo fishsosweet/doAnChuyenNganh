@@ -8,6 +8,8 @@ class TrangChuController extends Controller
 {
     public function trangChuAdmin()
     {
-        return view('admin.Home.trangchu');
+        return view('admin.Home.trangchu',[
+            'title' => 'Trang chủ '
+        ]);
     }
 }

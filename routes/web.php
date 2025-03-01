@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Admin\DangNhap;
 use \App\Http\Controllers\Admin\TrangChuController;
+use \App\Http\Controllers\Admin\BaiHatController;
+use \App\Http\Controllers\Admin\TheLoaiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,7 +27,11 @@ Route::post('/admin',[DangNhap::class,'kiemTraDangNhap'])->name('kiemTraDangNhap
 Route::middleware(['auth'])->group(function () {
     Route::prefix('admin')->group(function () {
 
-            Route::get('trangchu',[TrangChuController::class,'trangChuAdmin'])->name('trangChuAdmin');
+            Route::get('homeAdmin',[TrangChuController::class,'trangChuAdmin'])->name('trangChuAdmin');
+    //BaiHat
+            Route::get('addsong',[BaiHatController::class,'themBaiHat'])->name('themBaiHat');
+    //TheLoai
+            Route::get('addgenres',[TheLoaiController::class,'themTheLoai'])->name('themTheLoai');
 
 });
 });

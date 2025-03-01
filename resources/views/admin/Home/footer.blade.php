@@ -4,8 +4,9 @@
 <!-- Font Awesome JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 <!-- Custom JS -->
+<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
 <script>
-    // Thêm hiệu ứng mượt mà cho dropdown
+
     document.querySelectorAll('.dropdown-toggle').forEach(item => {
         item.addEventListener('click', function () {
             const icon = this.querySelector('i');
@@ -16,6 +17,14 @@
             }
         });
     });
+</script>
+<textarea id="myTextarea"></textarea>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#mota'))
+        .catch(error => {
+            console.error(error);
+        });
 </script>
 </body>
 </html>

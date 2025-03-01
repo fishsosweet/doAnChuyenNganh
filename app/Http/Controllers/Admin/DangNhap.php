@@ -11,7 +11,7 @@ class DangNhap extends Controller
     public function dangNhap()
     {
         return view('admin.dangnhap',[
-            'title'=>"Dang Nhap"
+            'title'=>"Đăng nhập"
         ]);
     }
 

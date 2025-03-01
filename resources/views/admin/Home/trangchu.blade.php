@@ -1,7 +1,7 @@
 @extends('admin.Home.main')
 
 @section('content')
-    <h1 class="mb-4">Trang chủ Admin</h1>
+    <h1 class="mb-4">{{$title}}</h1>
 
     <!-- Thống kê nhanh -->
     <div class="row mb-4">
