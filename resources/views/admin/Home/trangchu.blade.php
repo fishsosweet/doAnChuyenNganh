@@ -80,6 +80,16 @@
                         <td>567</td>
                         <td>2023-10-03</td>
                     </tr>
+                    @for($i=0;$i<=5;$i++)
+                        <tr>
+                            <td>4</td>
+                            <td>Bài hát 4</td>
+                            <td>Nghệ sĩ D</td>
+                            <td>8910</td>
+                            <td>2023-10-03</td>
+                        </tr>
+                    @endfor
+
                     </tbody>
                 </table>
             </div>

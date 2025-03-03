@@ -23,7 +23,7 @@
                 name="email"
                 class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Nhập email của bạn"
-                required
+
             >
         </div>
         <div class="mb-6">
@@ -34,7 +34,7 @@
                 name="password"
                 class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Nhập mật khẩu"
-                required
+
             >
         </div>
         <div class="flex items-center justify-between mb-6">

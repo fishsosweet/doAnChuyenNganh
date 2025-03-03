@@ -22,6 +22,15 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-star"></i> Nghệ sĩ
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{{route('themNgheSi')}}"><i class="fas fa-plus"></i> Thêm nghệ sĩ</a></li>
+                        <li><a class="dropdown-item" href=""><i class="fas fa-list"></i> Danh sách các nghệ sĩ</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-music"></i> Quản lý bài hát
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -38,6 +47,7 @@
         </div>
         <!-- Main content -->
         <div class="col-md-10 content">
+            @include('admin.Home.loi')
             @yield('content') <!-- Nơi hiển thị nội dung -->
         </div>
     </div>

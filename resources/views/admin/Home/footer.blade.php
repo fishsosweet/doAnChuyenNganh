@@ -26,5 +26,14 @@
             console.error(error);
         });
 </script>
+<script>
+    document.getElementById('anh').onchange = function () {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            document.getElementById('image_show').innerHTML = '<img src="' + e.target.result + '" width="100px" />';
+        };
+        reader.readAsDataURL(this.files[0]);
+    };
+</script>
 </body>
 </html>

@@ -10,15 +10,15 @@
                 <div class="col-md-6">
                     <div class="mb-3">
                         <label for="ten_bai_hat" class="form-label">Tên bài hát</label>
-                        <input type="text" class="form-control" id="tenbaihat" name="tenbaihat" required>
+                        <input type="text" class="form-control" id="tenbaihat" name="tenbaihat">
                     </div>
                     <div class="mb-3">
                         <label for="nghe_si" class="form-label">Nghệ sĩ</label>
-                        <input type="text" class="form-control" id="nghesi" name="nghesi" required>
+                        <input type="text" class="form-control" id="nghesi" name="nghesi" >
                     </div>
                     <div class="mb-3">
                         <label for="the_loai" class="form-label">Thể loại</label>
-                        <select class="form-select" id="theloai" name="theloai" required>
+                        <select class="form-select" id="theloai" name="theloai" >
                             <option value="Pop">Pop</option>
                             <option value="Rock">Rock</option>
                             <option value="Jazz">Jazz</option>
@@ -45,6 +45,8 @@
                     <div class="mb-3">
                         <label for="anh_bia" class="form-label">Ảnh bìa</label>
                         <input type="file" class="form-control" id="anh" name="anh" accept="image/*">
+                        <div id="image_show">
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="file_nhac" class="form-label">File nhạc</label>

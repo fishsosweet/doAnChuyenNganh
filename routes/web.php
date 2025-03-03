@@ -5,6 +5,7 @@ use \App\Http\Controllers\Admin\DangNhap;
 use \App\Http\Controllers\Admin\TrangChuController;
 use \App\Http\Controllers\Admin\BaiHatController;
 use \App\Http\Controllers\Admin\TheLoaiController;
+use \App\Http\Controllers\Admin\NgheSiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,6 +33,9 @@ Route::middleware(['auth'])->group(function () {
             Route::get('addsong',[BaiHatController::class,'themBaiHat'])->name('themBaiHat');
     //TheLoai
             Route::get('addgenres',[TheLoaiController::class,'themTheLoai'])->name('themTheLoai');
-
+            Route::post('addgenres',[TheLoaiController::class,'Post'])->name('postTheLoai');
+    //Nghesi
+            Route::get('addsinger',[NgheSiController::class,'themNgheSi'])->name('themNgheSi');
+            Route::post('addsinger',[NgheSiController::class,'Post'])->name('postNgheSi');
 });
 });
